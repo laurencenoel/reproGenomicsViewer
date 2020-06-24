@@ -13,7 +13,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}The ReproGenomicsViewer{% endblock title %}</title>
+    <title>{% block title %}HUGODECA viewer{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -23,7 +23,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 
-    <link rel="icon" href="{% static 'images/favicons/preFav.png' %}">
+    <link rel="icon" href="{% static 'images/favicons/hugodeca.png' %}">
 
     {% block css %}
     
@@ -52,7 +52,7 @@
       <!--Navbar -->
       <nav class="mb-1 navbar navbar-expand-lg navbar-light white scrolling-navbar">
         <a class="navbar-brand" href="{% url 'home' %}">
-          <img src="{% static 'images/logo/RGVLogo_tiny.png' %}" title="The ReproGenomics Viewer" width="70">
+          <img src="{% static 'images/logo/hugodeca.jpg' %}" title="HUGODECA Viewer" width="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
           aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +70,7 @@
                 <i class="fas fa-tools"></i>Tools
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'genome_browser' %}">Genome Browser</a>
+                <!--<a class="dropdown-item" href="{% url 'genome_browser' %}">Genome Browser</a>-->
                 <a class="dropdown-item" href="{% url 'studies:index' %}">Scatter & Violin plot</a>
               </div>
             </li>
@@ -81,7 +81,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item disabled" href="{% url 'tutorial' %}">Tutorials <span class="badge badge-default">Soon</span></a>
-                <a class="dropdown-item" href="{% url 'tech_corner' %}">Technical corner</a>
+               <!-- <a class="dropdown-item" href="{% url 'tech_corner' %}">Technical corner</a> -->
               </div>
             </li>
 
@@ -169,7 +169,7 @@
           {% endif %}
           {% if not request.COOKIES.citation_alert_box == "closed" %}
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-              The ReproGenomics Viewer is upgrading, please excuse us for the inconvenience.
+              The HUGODECA Viewer is upgrading, please excuse us for the inconvenience.
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
