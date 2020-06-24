@@ -25,6 +25,7 @@
             </thead>
             <tbody>
               {% for specie in species %}
+			  {% if specie.short == "hg38" %}
               <tr style="text-align:center;">
                 <td><img src="{% static specie.image %}" height="50" title="{{specie.name}}" alt="{{specie.name}}"></td>
                 <td><a href="{{specie.ucsc_url}}">{{specie.short}}</a></td>
@@ -36,6 +37,7 @@
                   </a>
                 </td>
               </tr>
+			  {% endif %}
               {% endfor %}
             </tbody>
           </table>
